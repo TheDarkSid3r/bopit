@@ -29,11 +29,12 @@ window.addEventListener("load", () => {
     const waitForKey = correctbop => new Promise(resolve => {
         const listener = e => {
             const bop = BopInfoPressed(BopInfo, e);
-            if (bop && bop.id == correctbop.id) {
+            if (bop) {
+                const correct = bop.id == correctbop.id;
                 displayBop(bop);
                 e.preventDefault();
                 cancel();
-                resolve(true);
+                resolve(correct);
             }
         };
 
