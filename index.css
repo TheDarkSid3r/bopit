@@ -1,0 +1,151 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    color: #000;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: "Gotham";
+    src: url(gpb.woff);
+    font-weight: 900;
+}
+
+* {
+    line-height: 100%;
+    box-sizing: border-box;
+    font-family: "Gotham", sans-serif;
+}
+
+.inner-wrapper {
+    width: 550px;
+    max-width: 100%;
+    padding: 50px 30px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logo {
+    width: 100%;
+    margin-bottom: 50px;
+    animation: menu-logo 10s ease-in-out infinite;
+}
+
+@keyframes menu-logo {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.load-button {
+    position: relative;
+    display: inline-block;
+    background-color: #da2342;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 30px;
+    font-weight: 900;
+    cursor: pointer;
+    border: 5px solid #da2342;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.load-button:hover {
+    background-color: #fff;
+    color: #da2342;
+}
+
+.loading
+/* , .main  */
+
+    {
+    display: none;
+}
+
+.loading-symbol {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 20px solid #da2342;
+    border-radius: 50%;
+    border-top-color: #0000;
+    margin: 0 auto 15px;
+    animation: loading-symbol 1s linear infinite;
+}
+
+@keyframes loading-symbol {
+    0% {
+        transform: rotate(0turn);
+    }
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.loading-text {
+    position: relative;
+    font-size: 70px;
+    font-weight: 900;
+    color: #da2342;
+}
+
+@media screen and (max-width: 500px) {
+    .loading-symbol {
+        width: 19vw;
+        height: 19vw;
+        border-width: 4vw;
+    }
+    .loading-text {
+        font-size: 14vw;
+    }
+}
+
+.main-key {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    font-size: 120px;
+    background-color: #da2342;
+    color: #fff;
+    text-shadow: 6px 8px 0 #0004;
+    box-shadow: 6px 8px 0 #0004;
+    border-radius: 100px;
+    line-height: 190px;
+    margin: 0 auto;
+    white-space: nowrap;
+    animation: main-key 0.5s ease-in-out forwards;
+}
+
+.main-key.wide-key {
+    font-size: 70px;
+    height: auto;
+    width: auto;
+    line-height: 100%;
+    padding: 20px 40px;
+}
+
+@keyframes main-key {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    30% {
+        opacity: 1;
+        transform: scale(0.65);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+}
