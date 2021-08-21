@@ -48,7 +48,7 @@ const MainNumberSprites = {
 const GenerateBopInfo = () => {
     const info = [
         //{ id: "tab", key: "TAB", display: "Tab", sprite: [76354, 521] },
-        //{ id: "enter", key: "ENTER", display: "Enter", sprite: [77423, 551] },
+        { id: "enter", key: "ENTER", display: "Enter", sprite: [77423, 551] },
         { id: "shift", key: "SHIFT", display: "Shift", sprite: [78395, 856] },
         { id: "backspace", key: ["BACKSPACE", "DELETE"], display: "Backspace", sprite: [79588, 700] },
         { id: "space", key: " ", display: "Space", sprite: [80534, 849] }
